@@ -41,7 +41,6 @@
 			} else {
 				$mega.addClass('right');
 			}
-			var $arrow = '<span class="'+defaults.classArrow+'"></span>';
 			// Get Menu Width
 			var megaWidth = $mega.width();
 			
@@ -53,7 +52,7 @@
 	
 				if($megaSub.length > 0){
 					
-					$('> a',$parent).addClass(defaults.classParent).append($arrow);
+				$('> a',$parent).addClass(defaults.classParent).append('<span class="'+defaults.classArrow+'"></span>');
 					$megaSub.addClass(defaults.classSubMenu).wrap('<div class="'+defaults.classContainer+'" />');
 					var $container = $('.'+defaults.classContainer,$parent);
 					
@@ -82,9 +81,6 @@
 						}
 
 						// Get mega dimensions
-						var subWidth = $megaSub.outerWidth(true);
-						var totalWidth = $container.outerWidth(true);
-						var containerPad = totalWidth - subWidth;
 						var itemWidth = $('.mega-unit',$megaSub).outerWidth(true);
 						var rowItems = $('.row:eq(0) .mega-unit',$megaSub).length;
 						var innerItemWidth = itemWidth * rowItems;
@@ -103,7 +99,9 @@
 							$('.mega-unit > a',this).css('height',maxValue+'px');
 							$(this).css('width',innerItemWidth+'px');
 						});
-
+						var subWidth = $megaSub.outerWidth(true);
+						var totalWidth = $container.outerWidth(true);
+						var containerPad = totalWidth - subWidth;
 						// Calculate Row Height
 						$('.row',$megaSub).each(function(){
 							var rowHeight = $(this).height();
@@ -124,7 +122,8 @@
 				$container.css({
 					height: subHeight+'px',
 					marginTop: -itemHeight+'px',
-					zIndex: '1000'
+					zIndex: '1000',
+					width: subWidth+'px'
 				}).hide();
 			});
 
