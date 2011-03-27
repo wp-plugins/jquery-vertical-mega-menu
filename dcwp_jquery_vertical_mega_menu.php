@@ -30,7 +30,7 @@ class dc_jqverticalmegamenu {
 	}
 
 	function header(){
-		echo "\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"".dc_jqverticalmegamenu::get_plugin_directory()."/css/dcverticalmegamenu.css\" media=\"screen\">";
+		echo "\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"".dc_jqverticalmegamenu::get_plugin_directory()."/css/dcverticalmegamenu.css\" media=\"screen\" />";
 	}
 	
 	function footer(){
