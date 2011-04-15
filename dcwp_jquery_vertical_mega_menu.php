@@ -5,7 +5,7 @@
 		Tags: jquery, flyout, mega, menu, vertical, animated, css, navigation, widget
 		Description: Creates a widget, which allows you to add vertical mega menus to your side columns using any Wordpress custom menu.
 		Author: Lee Chestnutt
-		Version: 1.1
+		Version: 1.2
 		Author URI: http://www.designchemical.com
 */
 
@@ -22,7 +22,7 @@ class dc_jqverticalmegamenu {
 			// Scripts
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'jqueryhoverintent', dc_jqverticalmegamenu::get_plugin_directory() . '/js/jquery.hoverIntent.minified.js', array('jquery') );
-			wp_enqueue_script( 'dcjqverticalmegamenu', dc_jqverticalmegamenu::get_plugin_directory() . '/js/jquery.dcverticalmegamenu.1.1.js', array('jquery') );
+			wp_enqueue_script( 'dcjqverticalmegamenu', dc_jqverticalmegamenu::get_plugin_directory() . '/js/jquery.dcverticalmegamenu.1.2.js', array('jquery') );
 		}
 		add_action( 'wp_footer', array('dc_jqverticalmegamenu', 'footer') );
 		

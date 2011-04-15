@@ -132,7 +132,7 @@
 				sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)
 				interval: 100, // number = milliseconds for onMouseOver polling interval
 				over: megaOver, // function = onMouseOver callback (REQUIRED)
-				timeout: 300, // number = milliseconds delay before onMouseOut
+				timeout: 0, // number = milliseconds delay before onMouseOut
 				out: megaOut // function = onMouseOut callback (REQUIRED)
 			};
 			
@@ -144,16 +144,16 @@
 				var $subNav = $('.sub',this);
 				var $container = $('.sub-container',this);
 				var width = $container.width();
-				var outerHeight = $container.outerHeight(true);
+				var outerHeight = $container.outerHeight();
 				var height = $container.height();
 				var itemHeight = $(this).outerHeight(true);
 				var offset = $link.offset();
 				var scrollTop = $(window).scrollTop();
-				offset = offset.top - scrollTop
+				var offset = offset.top - scrollTop
 				var bodyHeight = $(window).height();
 				var maxHeight = bodyHeight - offset;
-				var xsHeight = maxHeight - outerHeight - itemHeight;
-
+				var xsHeight = maxHeight - outerHeight;
+			
 				if(xsHeight < 0){
 					var containerMargin = xsHeight - itemHeight;
 					$container.css({marginTop: containerMargin+'px'});

@@ -206,7 +206,7 @@ if(! isset($instance['direction']) ){ $instance['direction'] = 'right'; }
 					$skin = $wpdcjqverticalmegamenu['skin'];
 					$skin = htmlspecialchars(ucfirst(preg_replace('/\..*$/', '', $skin)));
 					if('no-theme'!=$skin){
-						echo "\n\t<link rel=\"stylesheet\" href=\"".dc_jqverticalmegamenu::get_plugin_directory()."/skin.php?widget_id=".$key."&amp;skin=".strtolower($skin)."\" type=\"text/css\" media=\"screen\"  />";
+						echo "\n\t<link rel=\"stylesheet\" href=\"".dc_jqverticalmegamenu::get_plugin_directory()."/skin.php?widget_id=".$key."&skin=".strtolower($skin)."\" type=\"text/css\" media=\"screen\"  />";
 					}
 				}
 			}
@@ -236,8 +236,7 @@ if(! isset($instance['direction']) ){ $instance['direction'] = 'right'; }
 			<script type="text/javascript">
 				jQuery(document).ready(function($) {
 					jQuery('#<?php echo $widget_id.'-item'; ?> .menu').dcVerticalMegaMenu({
-						rowItems: '<?php echo $wpdcjqverticalmegamenu['rowItems']; ?>',
-						subMenuWidth: '<?php echo $wpdcjqverticalmegamenu['subMenuWidth']; ?>',
+						rowItems: <?php echo $wpdcjqverticalmegamenu['rowItems']; ?>,
 						speed: '<?php echo $wpdcjqverticalmegamenu['speed']; ?>',
 						direction: '<?php echo $direction; ?>',
 						effect: '<?php echo $effect; ?>'
