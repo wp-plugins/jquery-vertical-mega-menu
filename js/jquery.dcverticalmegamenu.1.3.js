@@ -115,6 +115,7 @@
 				} 
 			
 				var $container = $('.'+defaults.classContainer,$parent);
+				var subWidth = $megaSub.outerWidth(true);
 				// Get flyout height
 				var subHeight = $container.height();
 				var itemHeight = $parent.outerHeight(true);
