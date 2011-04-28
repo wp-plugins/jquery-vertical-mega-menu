@@ -205,7 +205,7 @@ if(! isset($instance['direction']) ){ $instance['direction'] = 'right'; }
 		
 					$skin = $wpdcjqverticalmegamenu['skin'];
 					$skin = htmlspecialchars(ucfirst(preg_replace('/\..*$/', '', $skin)));
-					if('no-theme'!=$skin){
+					if($skin != 'No-theme'){
 						echo "\n\t<link rel=\"stylesheet\" href=\"".dc_jqverticalmegamenu::get_plugin_directory()."/skin.php?widget_id=".$key."&skin=".strtolower($skin)."\" type=\"text/css\" media=\"screen\"  />";
 					}
 				}
