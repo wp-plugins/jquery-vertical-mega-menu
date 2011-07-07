@@ -22,7 +22,7 @@ The widget has several parameters that can be configured to help cutomise the ve
 * Animation Speed - The speed at which the dropdown menu will open/close
 * Skin - 8 different sample skins are available to give examples of css that can be used to style your own vertical mega menu
 
-[__See demo__](http://www.designchemical.com/lab/demo-wordpress-jquery-vertical-mega-menu-plugin/)
+[__See demo__](http://www.designchemical.com/lab/demo-wordpress-jquery-vertical-mega-menu-plugin.html)
 
 == Installation ==
 
