@@ -33,6 +33,8 @@ The widget has several parameters that can be configured to help cutomise the ve
 
 == Frequently Asked Questions ==
 
+[__Also check out our vertical mega menu faq page__](http://www.designchemical.com/blog/index.php/frequently-asked-questions/jquery-vertical-mega-menu/)
+
 = The menu appears on the page but does not work. Why? =
 
 One main reason for this is that the plugin adds the required jQuery code to your template footer. Make sure that your template files contain the wp_footer() function.
