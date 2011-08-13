@@ -35,11 +35,7 @@ class dc_jqverticalmegamenu_widget extends WP_Widget {
 	
 	function widget($args, $instance) {
 		extract( $args );
-		// Get menu
-		
-		if(! isset($instance['speed']) ){ $instance['speed'] = 'slow'; }	
-		if(! isset($instance['effect']) ){ $instance['effect'] = 'fade'; }
-if(! isset($instance['direction']) ){ $instance['direction'] = 'right'; }		
+		// Get menu	
 		$widget_options = wp_parse_args( $instance, $this->defaults );
 		extract( $widget_options, EXTR_SKIP );
 		
@@ -206,7 +202,7 @@ if(! isset($instance['direction']) ){ $instance['direction'] = 'right'; }
 					$skin = $wpdcjqverticalmegamenu['skin'];
 					$skin = htmlspecialchars(ucfirst(preg_replace('/\..*$/', '', $skin)));
 					if($skin != 'No-theme'){
-						echo "\n\t<link rel=\"stylesheet\" href=\"".dc_jqverticalmegamenu::get_plugin_directory()."/skin.php?widget_id=".$key."&skin=".strtolower($skin)."\" type=\"text/css\" media=\"screen\"  />";
+						echo "\n\t<link rel=\"stylesheet\" href=\"".dc_jqverticalmegamenu::get_plugin_directory()."/skin.php?widget_id=".$key."&amp;skin=".strtolower($skin)."\" type=\"text/css\" media=\"screen\"  />";
 					}
 				}
 			}
