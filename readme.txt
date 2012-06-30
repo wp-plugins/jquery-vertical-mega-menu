@@ -4,7 +4,7 @@ Donate link: http://www.designchemical.com/blog/index.php/wordpress-plugins/word
 Tags: jquery, flyout, mega, menu, vertical, animated, css, navigation, widget
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 
 Creates a widget, which allows you to add vertical mega menus to your side columns using any Wordpress custom menu.
 
@@ -63,6 +63,9 @@ Make sure that your theme does not have the side column, where your menu is loca
 4. Example of open mega menu
 
 == Changelog ==
+
+= 1.3.3 = 
+* Update: change wp_enqueue_script to function
 
 = 1.3.2 = 
 * Fixed: Error with default values
